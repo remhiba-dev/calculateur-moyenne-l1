@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculateur de Moyenne Universel</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+    <div class="calculator-container">
+        <h1>Calculateur de Moyenne </h1>
+        <p class="subtitle">Entrez vos notes.</p>
+        <div class="switch-zone">
+         <!-- Ce lien va ouvrir ta deuxième page -->
+        </div>
+
+        <form class="calc-form">
+           <!-- Module 1 : ASD 1 (Coef 5) -->
+            <div class="module-row">
+                <div class="module-info">
+                    <span class="module-name">ASD 1</span>
+                    <span class="module-coeff">Coef: 5</span>
+                </div>
+                <div class="inputs-group">
+                    <input type="number" step="0.01" min="0" max="20" placeholder="TP" id="asd-tp" required>
+                    <input type="number" step="0.01" min="0" max="20" placeholder="TD" id="asd-td" required>
+                    <input type="number" step="0.01" min="0" max="20" placeholder="Exam" id="asd-exam" required>
+                </div>
+            </div>
+
+            <!-- Module 2 : Analyse 1 (Coef 4) -->
+            <div class="module-row">
+                <div class="module-info">
+                    <span class="module-name">Analyse1</span>
+                    <span class="module-coeff">Coef: 4</span>
+                </div>
+                <div class="inputs-group">
+                    <input type="number" step="0.01" min="0" max="20" placeholder="TD" id="analyse-td" required>
+                    <input type="number" step="0.01" min="0" max="20" placeholder="Exam" id="analyse-exam" required>
+                </div>
+            </div>
+
+            <!-- Module 3 : SM1 (Coef 3) -->
+            <div class="module-row">
+                <div class="module-info">
+                    <span class="module-name">SM1</span>
+                    <span class="module-coeff">Coef: 3</span>
+                </div>
+                <div class="inputs-group">
+                    <input type="number" step="0.01" min="0" max="20" placeholder="TD" id="sm-td" required>
+                    <input type="number" step="0.01" min="0" max="20" placeholder="Exam" id="sm-exam" required>
+                </div>
+            </div>
+
+            <!-- Module 4 : Algebre 1 (Coef 2) -->
+            <div class="module-row">
+                <div class="module-info">
+                    <span class="module-name">Algebre1</span>
+                    <span class="module-coeff">Coef: 2</span>
+                </div>
+                <div class="inputs-group">
+                    <input type="number" step="0.01" min="0" max="20" placeholder="TD" id="algebre-td" required>
+                    <input type="number" step="0.01" min="0" max="20" placeholder="Exam" id="algebre-exam" required>
+                </div>
+            </div>
+
+            <!-- Module 5 : Electrecité (Coef 2) -->
+            <div class="module-row">
+                <div class="module-info">
+                    <span class="module-name">Electrecité</span>
+                    <span class="module-coeff">Coef: 2</span>
+                </div>
+                <div class="inputs-group">
+                    <input type="number" step="0.01" min="0" max="20" placeholder="TD" id="electrecity-td" required>
+                    <input type="number" step="0.01" min="0" max="20" placeholder="Exam" id="electrecity-exam" required>
+                </div>
+            </div>
+
+            <!-- Module 6 : logiciel libre(Coef 1) -->
+            <div class="module-row">
+                <div class="module-info">
+                    <span class="module-name">logiciel libre </span>
+                    <span class="module-coeff">Coef: 1</span>
+                </div>
+                <div class="inputs-group">
+                    <input type="number" step="0.01" min="0" max="20" placeholder="Exam" id="logiciel-libre-exam" required>
+                </div>
+            </div>
+
+            <!-- Module 7 : Anglais (Coef 1) -->
+            <div class="module-row">
+                <div class="module-info">
+                    <span class="module-name"> Anglais</span>
+                    <span class="module-coeff">Coef: 1</span>
+                </div>
+                <div class="inputs-group">
+                    <input type="number" step="0.01" min="0" max="20" placeholder="Exam" id="anglais-exam" required>
+                </div>
+            </div>
+            <button type="button" class="btn-calculate" id="btn-calc">Calculer la Moyenne</button>
+        </form>
+
+        <div class="result-box">
+            <h2>Votre Moyenne : <span id="final-average">-- / 20</span></h2>
+            <p id="status-message">En attente des notes...</p>
+        </div>
+    </div>
+    </div>
+
+    <script src="script2.js"></script>
+</body>
+</html>

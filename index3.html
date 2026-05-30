@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculateur Annuel - L1 Informatique</title>
+    <link rel="stylesheet" href="style2.css"> </head>
+<body>
+
+    <div class="calculator-container">
+        <div class="switch-zone" style="display: flex; gap: 10px; margin-bottom: 20px;">
+            <a href="index.html" class="btn-link-switch" style="width: 50%;">S1 / S2 Info</a>
+            <a href="index2.html" class="btn-link-switch" style="width: 50%;">Autre Spécialité</a>
+        </div>
+
+        <h1>Moyenne Annuelle <span class="semester">L1 Informatique</span></h1>
+        <p class="subtitle">Entrez vos moyennes des deux semestres pour calculer l'année.</p>
+
+        <form class="calc-form">
+            <div class="module-row">
+                <div class="module-info">
+                    <span class="module-name">Semestre 1 (S1)</span>
+                </div>
+                <div class="inputs-group" style="width: 50%;">
+                    <input type="number" step="0.01" min="0" max="20" placeholder="Moyenne S1" id="moy-s1" required>
+                </div>
+            </div>
+
+            <div class="module-row">
+                <div class="module-info">
+                    <span class="module-name">Semestre 2 (S2)</span>
+                </div>
+                <div class="inputs-group" style="width: 50%;">
+                    <input type="number" step="0.01" min="0" max="20" placeholder="Moyenne S2" id="moy-s2" required>
+                </div>
+            </div>
+
+            <button type="button" class="btn-calculate" id="btn-calc-annuel">Calculer l'Année</button>
+        </form>
+
+        <div class="result-box">
+            <h2>Moyenne Annuelle : <span id="final-average">-- / 20</span></h2>
+            <p id="status-message" style="font-weight: bold; margin-top: 10px;">En attente des données...</p>
+            <p id="help-message" style="font-size: 13px; color: #555; margin-top: 8px; line-height: 1.4;"></p>
+        </div>
+    </div>
+
+    <script src="script3.js"></script>
+</body>
+</html>

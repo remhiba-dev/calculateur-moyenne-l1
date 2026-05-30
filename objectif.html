@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulateur d'Objectifs - L1</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+    <div class="calculator-container">
+        <div class="switch-zone" style="display: flex; gap: 10px; margin-bottom: 20px;">
+            <a href="index.html" class="btn-link-switch" style="width: 50%;">← Retour au Calculateur</a>
+        </div>
+
+        <h1>Objectifs de Notes <span class="semester">Simulation de Validation</span></h1>
+        <p class="subtitle">Découvrez combien vous devez avoir à l'examen pour valider votre module à 10/20.</p>
+
+        <form class="calc-form">
+            <div class="module-row">
+                <div class="module-info">
+                    <span class="module-name">Système de calcul</span>
+                </div>
+                <div class="inputs-group" style="width: 55%;">
+                    <select id="bareme-select" style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #cbd5e1;">
+                        <option value="40-60">Standard (40% CC / 60% Examen)</option>
+                        <option value="30-70">Régime Spécial (30% CC / 70% Examen)</option>
+                        <option value="50-50">Mi-chemin (50% CC / 50% Examen)</option>
+                        <option value="100-exam">Examen Seul (100% Examen)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="module-row" id="cc-row">
+                <div class="module-info">
+                    <span class="module-name">Votre Note de CC actuelle</span>
+                </div>
+                <div class="inputs-group" style="width: 55%;">
+                    <input type="number" step="0.01" min="0" max="20" placeholder="Note sur 20" id="current-cc">
+                </div>
+            </div>
+
+            <button type="button" class="btn-calculate" id="btn-simuler">Calculer la Note d'Examen Requise</button>
+        </form>
+
+        <div class="result-box" style="margin-top: 25px;">
+            <h2 id="target-title">Note d'examen cible :</h2>
+            <span id="final-average" style="font-size: 32px; display: block; margin: 10px 0;">-- / 20</span>
+            <p id="status-message" style="font-weight: bold; font-size: 15px;"></p>
+        </div>
+    </div>
+
+    <script src="script_objectifs.js"></script>
+</body>
+</html>

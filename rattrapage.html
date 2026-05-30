@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculateur & Bulletin de Rattrapage</title>
+    <link rel="stylesheet" href="style2.css">
+    <style>
+        /* Quelques styles spécifiques pour le bulletin de rattrapage */
+        .rattrapage-box {
+            margin-top: 25px;
+            background-color: #fff5f5;
+            border: 2px dashed #e74c3c;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .rattrapage-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px dashed #fab1a0;
+        }
+        .target-note {
+            font-weight: bold;
+            color: #d63031;
+            background: #ffeaa7;
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="calculator-container">
+        <div class="switch-zone">
+            <a href="index.html" class="btn-link-switch">← Retour à l'accueil</a>
+        </div>
+
+        <h1>Bulletin de Rattrapage <span class="semester">S2 Informatique</span></h1>
+        <p class="subtitle">Entrez vos notes initiales. Si le semestre n'est pas validé, votre bulletin de rattrapage sera généré.</p>
+
+        <form class="calc-form">
+            <div class="module-row">
+                <div class="module-info"><span class="module-name">ASD 2</span><span class="module-coeff">Coef: 5</span></div>
+                <div class="inputs-group"><input type="number" step="0.01" placeholder="CC" id="r-asd-cc"> <input type="number" step="0.01" placeholder="Exam" id="r-asd-exam"></div>
+            </div>
+            <div class="module-row">
+                <div class="module-info"><span class="module-name">Analyse 2</span><span class="module-coeff">Coef: 4</span></div>
+                <div class="inputs-group"><input type="number" step="0.01" placeholder="CC" id="r-analyse-cc"> <input type="number" step="0.01" placeholder="Exam" id="r-analyse-exam"></div>
+            </div>
+            <div class="module-row">
+                <div class="module-info"><span class="module-name">SM2</span><span class="module-coeff">Coef: 3</span></div>
+                <div class="inputs-group"><input type="number" step="0.01" placeholder="CC" id="r-sm-cc"> <input type="number" step="0.01" placeholder="Exam" id="r-sm-exam"></div>
+            </div>
+            <div class="module-row">
+                <div class="module-info"><span class="module-name">Algebre 2</span><span class="module-coeff">Coef: 2</span></div>
+                <div class="inputs-group"><input type="number" step="0.01" placeholder="CC" id="r-algebre-cc"> <input type="number" step="0.01" placeholder="Exam" id="r-algebre-exam"></div>
+            </div>
+            <div class="module-row">
+                <div class="module-info"><span class="module-name">Electronique</span><span class="module-coeff">Coef: 2</span></div>
+                <div class="inputs-group"><input type="number" step="0.01" placeholder="CC" id="r-elec-cc"> <input type="number" step="0.01" placeholder="Exam" id="r-elec-exam"></div>
+            </div>
+            <div class="module-row">
+                <div class="module-info"><span class="module-name">Intro IA</span><span class="module-coeff">Coef: 1</span></div>
+                <div class="inputs-group"><input type="number" step="0.01" placeholder="CC" id="r-ia-cc"> <input type="number" step="0.01" placeholder="Exam" id="r-ia-exam"></div>
+            </div>
+            <div class="module-row">
+                <div class="module-info"><span class="module-name">Logique Math</span><span class="module-coeff">Coef: 1</span></div>
+                <div class="inputs-group"><input type="number" step="0.01" placeholder="CC" id="r-logique-cc"> <input type="number" step="0.01" placeholder="Exam" id="r-logique-exam"></div>
+            </div>
+
+            <button type="button" class="btn-calculate" id="btn-verifier">Vérifier mon Semestre</button>
+        </form>
+
+        <div class="result-box">
+            <h2>Moyenne Initiale : <span id="init-average">-- / 20</span></h2>
+            <p id="init-status">En attente des notes...</p>
+        </div>
+
+        <div id="bulletin-rattrapage" class="rattrapage-box hidden">
+            <h3 style="color: #c0392b; text-align: center; margin-bottom: 15px;">📋 Votre Bulletin de Session de Rattrapage</h3>
+            <p style="font-size: 13px; color: #666; margin-bottom: 15px; text-align: center;">Voici uniquement les modules non validés (< 10) et la note minimale à obtenir à l'examen de rattrapage :</p>
+            
+            <div id="rattrapage-list">
+                </div>
+        </div>
+    </div>
+
+    <script src="script_rattrapage.js"></script>
+</body>
+</html>

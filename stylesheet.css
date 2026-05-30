@@ -1,0 +1,177 @@
+/* Reset basique */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.calculator-container {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+}
+
+h1 {
+    color: #333;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.semester {
+    color: #667eea;
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.subtitle {
+    text-align: center;
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.calc-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.module-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.module-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 45%;
+}
+
+.module-name {
+    font-weight: 600;
+    color: #444;
+}
+
+.module-coeff {
+    font-size: 12px;
+    color: #888;
+    background-color: #f0f2f5;
+    padding: 2px 8px;
+    border-radius: 10px;
+    width: fit-content;
+}
+
+.inputs-group {
+    display: flex;
+    gap: 10px;
+    width: 50%;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    outline: none;
+    text-align: center;
+    font-size: 14px;
+    transition: border-color 0.2s;
+}
+
+input:focus {
+    border-color: #667eea;
+}
+
+.btn-calculate {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.1s, opacity 0.2s;
+    margin-top: 10px;
+}
+
+.btn-calculate:hover {
+    opacity: 0.9;
+}
+
+.btn-calculate:active {
+    transform: scale(0.98);
+}
+
+.result-box {
+    margin-top: 30px;
+    background-color: #f8fafc;
+    border-left: 5px solid #667eea;
+    padding: 20px;
+    border-radius: 0 8px 8px 0;
+    text-align: center;
+}
+
+.result-box h2 {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+#final-average {
+    color: #667eea;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#status-message {
+    font-size: 14px;
+    color: #666;
+}
+.switch-zone {
+    text-align: center;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+/* Styliser le lien pour qu'il ressemble à un joli bouton secondaire */
+.btn-link-switch {
+    display: inline-block;
+    background-color: #f1f5f9;
+    color: #1e3c72;
+    border: 2px dashed #2a5298;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none; /* Enlève le soulignement par défaut des liens */
+    text-align: center;
+    width: 100%;
+    transition: all 0.2s ease;
+}
+
+.btn-link-switch:hover {
+    background-color: #e2e8f0;
+    border-style: solid;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
